@@ -63,7 +63,7 @@ function Card() {
             onClick={() => openContentInModal(eventCenterImage, false)}
           />
           <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">Event Center 1</h1>
+            <h1 className="text-xl font-bold mb-2">Event Center</h1>
             <p className="text-gray-600">Poster</p>
           </div>
         </motion.div>
