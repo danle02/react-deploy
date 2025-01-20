@@ -28,7 +28,7 @@ function Navbar({ cardRef, footerRef }) {
                     <span>&#8599;</span>
                   </a>
                 ) : item === 'Resume' ? (
-                  <a href="/CV_DannyLe_2024.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/Danny.CV.pdf" target="_blank" rel="noopener noreferrer">
                     {item}
                     <span>&#8599;</span>
                   </a>
