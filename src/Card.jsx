@@ -13,7 +13,6 @@ import xcelTechnologiesImage7 from "./assets/xcel7.jpg";
 import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
 
-
 function Card() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -48,83 +47,103 @@ function Card() {
   };
 
   return (
-    <div className="flex items-center justify-center mb-10">
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        {/* Card 1 */}
-        <motion.div
-          className="bg-white shadow-md rounded-lg overflow-hidden w-64"
-          whileHover={{ scale: 1.05 }} // Scale up on hover
-          whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
-        >
-          <img
-            src={eventCenterImage}
-            alt="Event Center"
-            className="w-full h-40 object-cover cursor-pointer"
-            onClick={() => openContentInModal(eventCenterImage, false)}
-          />
-          <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">Event Center</h1>
-            <p className="text-gray-600">Poster</p>
-          </div>
-        </motion.div>
+    <div className="flex flex-wrap justify-center gap-4 mb-10">
+      {/* Card 1 */}
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }} // Scale up on hover
+        whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
+      >
+        <img
+          src={eventCenterImage}
+          alt="Event Center"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(eventCenterImage, false)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">Event Center</h1>
+          <p className="text-gray-600">Poster</p>
+        </div>
+      </motion.div>
 
-        {/* Card 2 */}
-        <motion.div
-          className="bg-white shadow-md rounded-lg overflow-hidden w-64"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <img
-            src={JMCimage}
-            alt="Event Center"
-            className="w-full h-40 object-cover cursor-pointer"
-            onClick={() => openContentInModal(JMCimage, false)}
-          />
-          <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">JMC</h1>
-            <p className="text-gray-600">Poster</p>
-          </div>
-        </motion.div>
+      {/* Card 2 */}
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <img
+          src={JMCimage}
+          alt="Event Center"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(JMCimage, false)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">JMC</h1>
+          <p className="text-gray-600">Poster</p>
+        </div>
+      </motion.div>
 
-        {/* Card 3 for Xcel Technologies */}
-        <motion.div
-          className="bg-white shadow-md rounded-lg overflow-hidden w-64"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <img
-            src={xcelTechnologiesImage1}
-            alt="Xcel Technologies"
-            className="w-full h-40 object-cover cursor-pointer"
-            onClick={() => openContentInModal(xcelImages, false, true)}
-          />
-          <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">Xcel Technologies</h1>
-            <p className="text-gray-600">Branding</p>
-          </div>
-        </motion.div>
+      {/* Card 3 for Xcel Technologies */}
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <img
+          src={xcelTechnologiesImage1}
+          alt="Xcel Technologies"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(xcelImages, false, true)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">Xcel Technologies</h1>
+          <p className="text-gray-600">Branding</p>
+        </div>
+      </motion.div>
 
-        {/* Video Card */}
-        <motion.div
-          className="bg-white shadow-md rounded-lg overflow-hidden w-64"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <video
-            src={Polyfjordvideo}
-            className="w-full h-40 object-cover cursor-pointer"
-            onClick={() => openContentInModal(Polyfjordvideo, true)}
-            muted
-            loop
-          />
-          <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">3D-Animation</h1>
-            <p className="text-gray-600">Motion-animation</p>
-            <p className="text-xs text-gray-600">*Tutorial followed by @Polyfjord</p>
-          </div>
-        </motion.div>
-      </div>
+      {/* Video Card */}
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <video
+          src={Polyfjordvideo}
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(Polyfjordvideo, true)}
+          muted
+          loop
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">3D-Animation</h1>
+          <p className="text-gray-600">Motion-animation</p>
+          <p className="text-xs text-gray-600">*Tutorial followed by @Polyfjord</p>
+        </div>
+      </motion.div>
 
+      {/* New Card example for testing */}
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <img
+          src={JMCimage}
+          alt="Event Center"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(JMCimage, false)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">JMC</h1>
+          <p className="text-gray-600">Poster</p>
+        </div>
+      </motion.div>
+
+         {/* New Card example for testing */}
+
+      {/* Additional cards will automatically flow to the next row due to flex-wrap */}
+      
       {/* Modal */}
       {isModalOpen && (
         <div
