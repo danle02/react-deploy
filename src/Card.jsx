@@ -3,6 +3,7 @@ import { motion } from "framer-motion"; // Import Framer Motion
 import eventCenterImage from "./assets/Eventcenter_poster.png";
 import JMCimage from "./assets/JMC.png";
 import Polyfjordvideo from "./assets/Polyfjord.mp4";
+import tfs_game from "./assets/tfs_game.png";
 import xcelTechnologiesImage1 from "./assets/xcel.jpg";
 import xcelTechnologiesImage2 from "./assets/xcel2.jpg";
 import xcelTechnologiesImage3 from "./assets/xcel3.jpg";
@@ -123,6 +124,24 @@ function Card() {
       </motion.div>
 
          {/* New Card example for testing */}
+         <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <img
+          src={tfs_game}
+          alt="Event Center"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => window.open('https://github.com/phatd0nut/the-final-stand/tree/master', '_blank')}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">The Final Stand</h1>
+          <p className="text-gray-600">Videogame</p>
+          <p>Github</p>
+        </div>
+      </motion.div>
+         
 
       {/* Additional cards will automatically flow to the next row due to flex-wrap */}
       
