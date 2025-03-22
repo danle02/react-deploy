@@ -4,6 +4,7 @@ import eventCenterImage from "./assets/Eventcenter_poster.png";
 import JMCimage from "./assets/JMC.png";
 import Polyfjordvideo from "./assets/Polyfjord.mp4";
 import tfs_game from "./assets/tfs_game.png";
+import Polestar from "./assets/Polestar.mp4";
 import xcelTechnologiesImage1 from "./assets/xcel.jpg";
 import xcelTechnologiesImage2 from "./assets/xcel2.jpg";
 import xcelTechnologiesImage3 from "./assets/xcel3.jpg";
@@ -141,6 +142,25 @@ function Card() {
           <p>Github</p>
         </div>
       </motion.div>
+      
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <video
+          src={Polestar}
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(Polestar, true)}
+          muted
+          loop
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">Motion design</h1>
+          <p className="text-gray-600">Branding</p>
+        </div>
+      </motion.div>
+
          
 
       {/* Additional cards will automatically flow to the next row due to flex-wrap */}
