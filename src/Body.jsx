@@ -46,18 +46,10 @@ function Body() {
           style={{ height: isAboutOpen ? 'auto' : '4rem' }}
         >
           <div className="text-center sm:text-left">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-2 break-words custom-break">
-              Hello, I'm Danny, a <span className="text-blue-500">Digital designer</span> from Växjö!
+            <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+              Hello, I'm Danny, a <span className="text-blue-500">Digital designer.</span>
             </h1>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ scale: 0, rotate: 0 }}
-          animate={{ scale: [0, 1.2, 1], rotate: [0, 10, -10, 0] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          className="mt-10"
-        >
-          <img src={profilImage} className="mx-auto" alt="Danny's profile" />
         </motion.div>
 
         {/* Grid Layout for About, Education, Proficiencies */}
