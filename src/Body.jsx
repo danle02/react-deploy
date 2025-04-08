@@ -46,7 +46,7 @@ function Body() {
           style={{ height: isAboutOpen ? 'auto' : '4rem' }}
         >
           <div className="text-center sm:text-left">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+            <h1 className="text-xl sm:text-3xl font-bold mb-2">
               Hello, I'm Danny, a <span className="text-blue-500">Digital designer.</span>
             </h1>
           </div>
