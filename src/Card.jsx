@@ -14,7 +14,7 @@ import xcelTechnologiesImage6 from "./assets/xcel6.png";
 import xcelTechnologiesImage7 from "./assets/xcel7.jpg";
 import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
-import neonclamp from "./assets/neonclamp.png"; 
+import neonclamp from "./assets/Neonclamp.png"; 
 
 function Card() {
   const [isModalOpen, setIsModalOpen] = useState(false);
