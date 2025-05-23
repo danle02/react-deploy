@@ -14,6 +14,7 @@ import xcelTechnologiesImage6 from "./assets/xcel6.png";
 import xcelTechnologiesImage7 from "./assets/xcel7.jpg";
 import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
+import neonclamp from "./assets/neonclamp.png"; 
 
 function Card() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -161,6 +162,22 @@ function Card() {
         </div>
       </motion.div>
 
+      <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }} // Scale up on hover
+        whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
+      >
+        <img
+          src={neonclamp}
+          alt="Event Center"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(neonclamp, false)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">NeonClamp v2</h1>
+          <p className="text-gray-600">Poster</p>
+        </div>
+      </motion.div>
          
 
       {/* Additional cards will automatically flow to the next row due to flex-wrap */}
