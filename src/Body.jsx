@@ -103,7 +103,7 @@ function Body() {
 
           {/* My Projects Section */}
           <div className="md:col-span-3 md:col-start-1">
-            <h1 className="text-xl font-bold text-center sm:text-left">My projects</h1>
+            <h1 className="text-2xl font-bold text-center sm:text-left">My projects:</h1>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ function App() {
   const footerRef = useRef(null);
 
   return (
-    <div id="root" className="flex flex-col min-h-screen"> {/* Main container */}
+    <div id="root" className="flex flex-col min-h-screen bg"> {/* Main container */}
       <Navbar cardRef={cardRef} footerRef={footerRef} />
       <div className="main-content"> {/* Content container */}
         <Body />
