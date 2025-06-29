@@ -15,6 +15,7 @@ import xcelTechnologiesImage7 from "./assets/xcel7.jpg";
 import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
 import neonclamp from "./assets/Neonclamp.png"; 
+import tyler from "./assets/tyler.jpg"; // Assuming you have a Tyler the Creator image
 import EA from "./assets/EA.jpg"; // Assuming you have an EA image
 
 function Card() {
@@ -107,22 +108,20 @@ function Card() {
       </motion.div>
 
       {/* Video Card */}
-      <motion.div
+        <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.05 }} // Scale up on hover
+        whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
-        <video
-          src={Polyfjordvideo}
+        <img
+          src={tyler}
+          alt="Tyler the Creator"
           className="w-full h-40 object-cover cursor-pointer"
-          onClick={() => openContentInModal(Polyfjordvideo, true)}
-          muted
-          loop
+          onClick={() => openContentInModal(tyler, false)}
         />
         <div className="p-4">
-          <h1 className="text-xl font-bold mb-2">3D-Animation</h1>
-          <p className="text-gray-600">Motion-animation</p>
-          <p className="text-xs text-gray-600">*Tutorial followed by @Polyfjord</p>
+          <h1 className="text-xl font-bold mb-2">Tyler the Creator</h1>
+          <p className="text-gray-600">Poster</p>
         </div>
       </motion.div>
 
@@ -170,7 +169,7 @@ function Card() {
       >
         <img
           src={neonclamp}
-          alt="Event Center"
+          alt="Green breakpad"
           className="w-full h-40 object-cover cursor-pointer"
           onClick={() => openContentInModal(neonclamp, false)}
         />
