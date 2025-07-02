@@ -14,15 +14,17 @@ import xcelTechnologiesImage6 from "./assets/xcel6.png";
 import xcelTechnologiesImage7 from "./assets/xcel7.jpg";
 import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
-import neonclamp from "./assets/Neonclamp.png"; 
+import neonclamp from "./assets/Neonclamp.png";
 import tyler from "./assets/tyler.jpg"; // Assuming you have a Tyler the Creator image
 import EA from "./assets/EA.jpg"; // Assuming you have an EA image
+import neonclamp2 from "./assets/anotherNeonclamp.png"; // Add your second image here
 
 function Card() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isVideo, setIsVideo] = useState(false);
   const [isXcel, setIsXcel] = useState(false);
+  const [isNeonclamp, setIsNeonclamp] = useState(false);
 
   // Xcel Technologies Images
   const xcelImages = [
@@ -37,11 +39,14 @@ function Card() {
     xcelTechnologiesImage9,
   ];
 
-  const openContentInModal = (url, isVideoContent, isXcelContent = false) => {
+  const neonclampImages = [neonclamp, neonclamp2];
+
+  const openContentInModal = (url, isVideoContent, isXcelContent, isNeonclampContent = false) => {
     setSelectedImage(url);
     setIsModalOpen(true);
     setIsVideo(isVideoContent);
     setIsXcel(isXcelContent);
+    setIsNeonclamp(isNeonclampContent);
   };
 
   const closeModal = () => {
@@ -49,6 +54,7 @@ function Card() {
     setSelectedImage(null);
     setIsVideo(false);
     setIsXcel(false);
+    setIsNeonclamp(false);
   };
 
   return (
@@ -108,7 +114,7 @@ function Card() {
       </motion.div>
 
       {/* Video Card */}
-        <motion.div
+      <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
@@ -125,8 +131,8 @@ function Card() {
         </div>
       </motion.div>
 
-         {/* New Card example for testing */}
-         <motion.div
+      {/* New Card example for testing */}
+      <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -143,7 +149,7 @@ function Card() {
           <p>Github</p>
         </div>
       </motion.div>
-      
+
       <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
         whileHover={{ scale: 1.05 }}
@@ -171,15 +177,15 @@ function Card() {
           src={neonclamp}
           alt="Green breakpad"
           className="w-full h-40 object-cover cursor-pointer"
-          onClick={() => openContentInModal(neonclamp, false)}
+          onClick={() => openContentInModal(neonclampImages, false, false, true)}
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">NeonClamp v2</h1>
           <p className="text-gray-600">Poster, 3D</p>
         </div>
       </motion.div>
-      
-      
+
+
       <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
         whileHover={{ scale: 1.05 }} // Scale up on hover
@@ -196,33 +202,41 @@ function Card() {
           <p className="text-gray-600">Graphic Design</p>
         </div>
       </motion.div>
-      
-         
+
+
 
       {/* Additional cards will automatically flow to the next row due to flex-wrap */}
-      
+
       {/* Modal */}
       {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto"
-          onClick={closeModal} // Close modal when clicking on the background
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto"
+          onClick={closeModal}>
           <motion.div
             className="relative p-4 max-w-full max-h-full"
             initial={{ scale: 0.8 }}
-            animate={{ scale: 1.1 }} // Slight zoom-in effect when modal opens
+            animate={{ scale: 1.1 }}
             exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the content
+            onClick={(e) => e.stopPropagation()}
           >
             {isXcel ? (
-              // Display stacked Xcel images
               <div className="overflow-y-auto">
                 {xcelImages.map((image, index) => (
                   <img
                     key={index}
                     src={image}
                     alt={`Xcel Technologies ${index + 1}`}
-                    className="w-full max-w-[60vw] object-contain" // Ensures same width for all images
+                    className="w-full max-w-[60vw] object-contain"
+                  />
+                ))}
+              </div>
+            ) : isNeonclamp ? (
+              <div className="overflow-y-auto">
+                {neonclampImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`NeonClamp ${index + 1}`}
+                    className="w-full max-w-[600px] h-auto object-contain mx-auto mb-4"
                   />
                 ))}
               </div>
@@ -237,7 +251,7 @@ function Card() {
               <img
                 src={selectedImage}
                 alt="Selected"
-                className="w-full max-h-[85vh] max-w-[85vw] object-contain" // Ensure the image is fully visible
+                className="w-full max-h-[85vh] max-w-[85vw] object-contain"
               />
             )}
           </motion.div>
