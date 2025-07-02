@@ -67,7 +67,7 @@ function Card() {
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">Event Center</h1>
-          <p className="text-gray-600">Poster</p>
+          <p className="text-gray-600">Poster, 3D-modelling</p>
         </div>
       </motion.div>
 
@@ -85,7 +85,7 @@ function Card() {
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">JMC</h1>
-          <p className="text-gray-600">Poster</p>
+          <p className="text-gray-600">Poster, 3D-modelling</p>
         </div>
       </motion.div>
 
@@ -158,7 +158,7 @@ function Card() {
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">Motion design</h1>
-          <p className="text-gray-600">Branding</p>
+          <p className="text-gray-600">Branding, 3D</p>
         </div>
       </motion.div>
 
@@ -175,7 +175,7 @@ function Card() {
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">NeonClamp v2</h1>
-          <p className="text-gray-600">Poster</p>
+          <p className="text-gray-600">Poster, 3D</p>
         </div>
       </motion.div>
       
