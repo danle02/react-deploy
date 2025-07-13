@@ -16,6 +16,7 @@ import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
 import neonclamp from "./assets/Neonclamp.png";
 import tyler from "./assets/tyler.jpg"; // Assuming you have a Tyler the Creator image
+import hanni from "./assets/Hanni.jpg";  
 import EA from "./assets/EA.jpg"; // Assuming you have an EA image
 import neonclamp2 from "./assets/anotherNeonclamp.png"; // Add your second image here
 
@@ -127,6 +128,23 @@ function Card() {
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">Tyler the Creator</h1>
+          <p className="text-gray-600">Poster</p>
+        </div>
+      </motion.div>
+      
+        <motion.div
+        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        whileHover={{ scale: 1.05 }} // Scale up on hover
+        whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
+      >
+        <img
+          src={hanni}
+          alt="Tyler the Creator"
+          className="w-full h-40 object-cover cursor-pointer"
+          onClick={() => openContentInModal(hanni, false)}
+        />
+        <div className="p-4">
+          <h1 className="text-xl font-bold mb-2">Hanni</h1>
           <p className="text-gray-600">Poster</p>
         </div>
       </motion.div>
