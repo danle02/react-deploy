@@ -59,10 +59,10 @@ function Card() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 max-w-7xl mx-auto">
       {/* Card 1 */}
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
@@ -80,7 +80,7 @@ function Card() {
 
       {/* Card 2 */}
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -98,7 +98,7 @@ function Card() {
 
       {/* Card 3 for Xcel Technologies */}
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -116,7 +116,7 @@ function Card() {
 
       {/* Video Card */}
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
@@ -133,7 +133,7 @@ function Card() {
       </motion.div>
       
         <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
@@ -151,7 +151,7 @@ function Card() {
 
       {/* New Card example for testing */}
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -169,7 +169,7 @@ function Card() {
       </motion.div>
 
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hiddenw-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -187,7 +187,7 @@ function Card() {
       </motion.div>
 
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
@@ -205,7 +205,7 @@ function Card() {
 
 
       <motion.div
-        className="bg-white shadow-md rounded-lg overflow-hidden w-64 md:w-80 lg:w-96"
+        className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
       >
