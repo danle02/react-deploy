@@ -63,7 +63,7 @@ function Body() {
               About me
             </h1>
             <p className={`mt-2 ${isAboutOpen ? 'block' : 'hidden'} md:block`}>
-              I'm currently pursuing a Bachelor's degree in Interactive Media and Web Technologies at Linnaeus University, with a strong passion for digital design, particularly in 3D and Graphic design. I thrive on creativity and am always eager to explore new technologies and expand my skills.
+             Danny is a visual designer with a sharp eye for detail and a passion for clear, impactful communication. His work blends creativity with purpose, combining strong typography, thoughtful color use, and balanced composition to create designs that are both functional and visually striking. With experience across digital and print media, Danny brings a refined aesthetic to branding, editorial design, UI elements, and marketing materials.
             </p>
           </div>
 
