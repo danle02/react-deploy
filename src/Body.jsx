@@ -63,7 +63,7 @@ function Body() {
               About me
             </h1>
             <p className={`mt-2 ${isAboutOpen ? 'block' : 'hidden'} md:block`}>
-             Danny is a visual designer with a sharp eye for detail and a passion for clear, impactful communication. His work blends creativity with purpose, combining strong typography, thoughtful color use, and balanced composition to create designs that are both functional and visually striking. With experience across digital and print media, Danny brings a refined aesthetic to branding, editorial design, UI elements, and marketing materials.
+             Danny is a visual designer who values clarity and thoughtful communication. He works with typography, color, and composition to create functional, visually engaging designs, with experience in branding, editorial, UI, and marketing materials.
             </p>
           </div>
 
