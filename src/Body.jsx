@@ -63,7 +63,7 @@ function Body() {
               About me
             </h1>
             <p className={`mt-2 ${isAboutOpen ? 'block' : 'hidden'} md:block`}>
-             Danny is a visual designer who values clarity and thoughtful communication. He works with typography, color, and composition to create functional, visually engaging designs, with experience in branding, editorial, UI, and marketing materials.
+             Danny is a digital designer who values clarity and thoughtful communication. He works with typography, color, and composition to create functional, visually engaging designs, with experience in branding, editorial, UI, and marketing materials.
             </p>
           </div>
 

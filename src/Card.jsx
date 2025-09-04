@@ -16,8 +16,9 @@ import xcelTechnologiesImage8 from "./assets/xcel8.jpg";
 import xcelTechnologiesImage9 from "./assets/xcel9.jpg";
 import neonclamp from "./assets/Neonclamp.png";
 import tyler from "./assets/tyler.jpg"; // Assuming you have a Tyler the Creator image
-import hanni from "./assets/Hanni.jpg";  
-import EA from "./assets/EA.jpg"; // Assuming you have an EA image
+import hanni from "./assets/Hanni.jpg";
+import IVProduktVideo from "./assets/iv_produkt.mp4";
+import IVProduktLogo from "./assets/IV-Produkt_Logo_rgb.jpg";
 import neonclamp2 from "./assets/anotherNeonclamp.png"; // Add your second image here
 
 function Card() {
@@ -26,6 +27,7 @@ function Card() {
   const [isVideo, setIsVideo] = useState(false);
   const [isXcel, setIsXcel] = useState(false);
   const [isNeonclamp, setIsNeonclamp] = useState(false);
+  
 
   // Xcel Technologies Images
   const xcelImages = [
@@ -131,8 +133,8 @@ function Card() {
           <p className="text-gray-600">Poster</p>
         </div>
       </motion.div>
-      
-        <motion.div
+
+      <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-full"
         whileHover={{ scale: 1.05 }} // Scale up on hover
         whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
@@ -159,7 +161,11 @@ function Card() {
           src={tfs_game}
           alt="Event Center"
           className="w-full h-40 object-cover cursor-pointer"
-          onClick={() => window.open('https://github.com/phatd0nut/the-final-stand/tree/master', '_blank')}
+          onClick={() => {
+            if (window.confirm('You will be redirected to GitHub to view the project source code. Continue?')) {
+              window.open('https://github.com/phatd0nut/the-final-stand/tree/master', '_blank');
+            }
+          }}
         />
         <div className="p-4">
           <h1 className="text-xl font-bold mb-2">The Final Stand</h1>
@@ -206,18 +212,19 @@ function Card() {
 
       <motion.div
         className="bg-white shadow-md rounded-lg overflow-hidden w-full"
-        whileHover={{ scale: 1.05 }} // Scale up on hover
-        whileTap={{ scale: 0.95 }} // Optional: Scale down on click/tap
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         <img
-          src={EA} // Assuming you have an EA image
-          alt="Event Center"
-          className="w-full h-40 object-cover cursor-pointer"
-          onClick={() => openContentInModal(EA, false)}
+          src={IVProduktLogo}
+          alt="IV Produkt Logo"
+          className="w-full h-40 object-contain cursor-pointer bg-white"
+          onClick={() => openContentInModal(IVProduktVideo, true)}
         />
         <div className="p-4">
-          <h1 className="text-xl font-bold mb-2">Vietnam</h1>
-          <p className="text-gray-600">Graphic Design</p>
+          <h1 className="text-xl font-bold mb-2">IV Produkt</h1>
+          <p className="text-gray-600">Video</p>
+          <p><a href="https://www.linkedin.com/posts/iv-produkt-ab_ivprodukt-ventilation-smartventilation-activity-7265647473707139072-pQCX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbSoFkB1xdEglhXZATNb6-4Vs4iOK5DsTY" target="_blank" rel="noopener noreferrer" className="underline">Linkedin</a></p>
         </div>
       </motion.div>
 
